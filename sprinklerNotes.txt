@@ -1,0 +1,20 @@
+What we're doing - 
+Need to define a sprinkler system for a building that is sensitive to seismic input (peak floor acceleration (PFA), and interstory drift ratio (IDR))
+
+This will work as input for a fire spread algorithm in that building. Sprinklers that have an undamaged path to the sump and pump in the basement of the building (assumed undamaged) will reduce or eliminate the risk of fire spread in that compartment (room). 
+
+How? 
+The building and fire spread algorithm is already defined in python. 
+The seismic input is currently being calculated by open-source finite element modeling (FEM) program OpenSees. 
+
+The plan for the sprinkler system is to define using the graph-theory toolbox in python. Should be able to define the pump, joints, and sprinklers as nodes; and pipes as edges. The design of the sprinkler system has already been defined using the pipe scheduling method from NFPA-13, Sec. 22.5. 
+
+Big question:
+The big question will be how to assess and define the damage states.
+
+Right now: 
+Just figuring out the graph-theory package and seeing if it has custom parameters. Will need to use something else if it doesn't.
+- The graph-theory package only allows for one value per edge. We'll definitely need more than that. igraph may be a better choice.
+
+On the side: 
+Matafe is hosting the ALGS Winter Circuit Tourney 2 www.twitch.tc/matafe_
